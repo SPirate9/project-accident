@@ -1,0 +1,65 @@
+2025-06-19 12:29:47,313 - HiveManager - INFO - HiveManager initialized - SIMPLE
+2025-06-19 12:29:47,314 - HiveManager - INFO - Creating DB: accident_analysis_db
+2025-06-19 12:29:47,314 - HiveManager - INFO - Executing Hive: CREATE DATABASE IF NOT EXISTS accident_analysis_db;
+2025-06-19 12:29:56,932 - HiveManager - INFO - Hive command OK
+2025-06-19 12:31:35,582 - HiveManager - INFO - Creating MANAGED Hive table accidents_silver
+2025-06-19 12:31:35,582 - HiveManager - INFO - Executing Hive: USE accident_analysis_db; DROP TABLE IF EXISTS accidents_silver;
+2025-06-19 12:31:46,570 - HiveManager - INFO - Hive command OK
+2025-06-19 12:31:46,570 - HiveManager - INFO - Executing Hive: 
+            USE accident_analysis_db;
+            CREATE TABLE accidents_silver (
+                ID string,
+                Source string,
+                Severity int,
+                Start_Time timestamp,
+                End_Time timestamp,
+                Start_Lat double,
+                Start_Lng double,
+                End_Lat double,
+                End_Lng double,
+                Distance_mi double,
+                Description string,
+                Street string,
+                City string,
+                County string,
+                State string,
+                Zipcode string,
+                Country string,
+                Timezone string,
+                Airport_Code string,
+                Weather_Timestamp timestamp,
+                Temperature_F double,
+                Wind_Chill_F double,
+                Humidity double,
+                Pressure_in double,
+                Visibility_mi double,
+                Wind_Direction string,
+                Wind_Speed_mph double,
+                Precipitation_in double,
+                Weather_Condition string,
+                Amenity boolean,
+                Bump boolean,
+                Crossing boolean,
+                Give_Way boolean,
+                Junction boolean,
+                No_Exit boolean,
+                Railway boolean,
+                Roundabout boolean,
+                Station boolean,
+                Stop boolean,
+                Traffic_Calming boolean,
+                Traffic_Signal boolean,
+                Turning_Loop boolean,
+                Sunrise_Sunset string,
+                Civil_Twilight string,
+                Nautical_Twilight string,
+                Astronomical_Twilight string,
+                situation_date string
+            )
+            STORED AS PARQUET
+            LOCATION 'hdfs://localhost:9000/user/saad/silver/simple';
+        
+2025-06-19 12:31:55,469 - HiveManager - INFO - Hive command OK
+2025-06-19 12:31:55,469 - HiveManager - INFO - Table accidents_silver created as MANAGED
+2025-06-19 12:31:55,470 - HiveManager - INFO - Executing Hive: USE accident_analysis_db; SHOW TABLES;
+2025-06-19 12:32:05,217 - HiveManager - INFO - Hive command OK

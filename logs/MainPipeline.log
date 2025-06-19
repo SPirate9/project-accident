@@ -1,0 +1,38 @@
+2025-06-18 12:14:28,455 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 12:14:28,455 - MainPipeline - INFO - === STEP 1: INCREMENTAL FEEDER ===
+2025-06-18 12:30:19,056 - MainPipeline - INFO - Feeder completed successfully
+2025-06-18 12:30:20,408 - MainPipeline - INFO - Pipeline completed
+2025-06-18 15:58:26,373 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 15:58:31,272 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-18 15:58:31,272 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-18 16:21:22,282 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 16:21:24,573 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder2025-06-18 16:41:09,712 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 16:41:11,941 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-18 16:41:11,941 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-18 16:48:11,356 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 16:48:13,810 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-18 16:48:13,810 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-18 16:51:36,053 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 16:51:38,532 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-18 16:51:38,533 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-18 17:07:46,989 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-18 17:07:49,280 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-19 09:38:03,256 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-19 09:38:05,336 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-19 09:38:05,337 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-19 09:40:15,516 - MainPipeline - INFO - Preprocessing completed successfully
+2025-06-19 09:40:15,727 - MainPipeline - INFO - Pipeline completed successfully
+2025-06-19 09:53:55,660 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-19 09:53:57,761 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-19 09:53:57,761 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-19 09:55:42,944 - MainPipeline - ERROR - Error in preprocessing: create_table_from_parquet() got an unexpected keyword argument 'parquet_path'
+2025-06-19 10:00:15,565 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-19 10:00:17,688 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-19 10:00:17,689 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-19 10:02:26,204 - MainPipeline - INFO - Preprocessing completed successfully
+2025-06-19 10:02:26,392 - MainPipeline - INFO - Pipeline completed successfully
+2025-06-19 12:29:39,716 - MainPipeline - INFO - Starting accident analysis pipeline
+2025-06-19 12:29:42,233 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
+2025-06-19 12:29:42,233 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
+2025-06-19 12:32:05,219 - MainPipeline - INFO - Preprocessing completed successfully
+2025-06-19 12:32:05,748 - MainPipeline - INFO - Pipeline completed successfully
