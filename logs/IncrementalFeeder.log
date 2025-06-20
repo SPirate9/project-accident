@@ -1,32 +1,32 @@
-2025-06-18 12:14:33,355 - IncrementalFeeder - INFO - IncrementalFeeder initialized
-2025-06-18 12:14:33,355 - IncrementalFeeder - INFO - Starting incremental feeder pipeline
-2025-06-18 12:14:33,356 - IncrementalFeeder - INFO - Reading source data from file:///Users/saad/Documents/M1 EFREI/efrei/project-accident/data/US_Accidents_March23.csv
-2025-06-18 12:15:51,213 - IncrementalFeeder - INFO - Source data loaded: 7728394 rows
-2025-06-18 12:15:51,217 - IncrementalFeeder - INFO - Splitting data into 3 equal parts
-2025-06-18 12:18:25,026 - IncrementalFeeder - INFO - Data split completed: Part1=2552639, Part2=2549249, Part3=2626506
-2025-06-18 12:18:25,034 - IncrementalFeeder - INFO - Saving individual parts with situation_date
-2025-06-18 12:18:25,034 - IncrementalFeeder - INFO - Saving part 1 for date 2025-01-01
-2025-06-18 12:18:25,035 - IncrementalFeeder - INFO - Adding situation_date 2025-01-01 to data part
-2025-06-18 12:20:32,107 - IncrementalFeeder - INFO - Part 1 saved: 2552639 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_01
-2025-06-18 12:20:32,109 - IncrementalFeeder - INFO - Saving part 2 for date 2025-01-02
-2025-06-18 12:20:32,112 - IncrementalFeeder - INFO - Adding situation_date 2025-01-02 to data part
-2025-06-18 12:22:24,000 - IncrementalFeeder - INFO - Part 2 saved: 2549249 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_02
-2025-06-18 12:22:24,001 - IncrementalFeeder - INFO - Saving part 3 for date 2025-01-03
-2025-06-18 12:22:24,002 - IncrementalFeeder - INFO - Adding situation_date 2025-01-03 to data part
-2025-06-18 12:24:26,312 - IncrementalFeeder - INFO - Part 3 saved: 2626506 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_03
-2025-06-18 12:24:26,321 - IncrementalFeeder - INFO - Building incremental bronze data
-2025-06-18 12:24:26,321 - IncrementalFeeder - INFO - Building bronze for day 1: 2025-01-01
-2025-06-18 12:24:26,322 - IncrementalFeeder - INFO - Day 1: Using only part for 2025-01-01
-2025-06-18 12:25:28,823 - IncrementalFeeder - INFO - Bronze saved for 2025-01-01: 2552639 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/01
-2025-06-18 12:25:28,864 - IncrementalFeeder - INFO - Building bronze for day 2: 2025-01-02
-2025-06-18 12:25:28,865 - IncrementalFeeder - INFO - Reading previous day data from hdfs://localhost:9000/user/saad/bronze/2025/01/01
-2025-06-18 12:25:29,682 - IncrementalFeeder - INFO - Day 2: Combined previous + current part
-2025-06-18 12:27:28,821 - IncrementalFeeder - INFO - Bronze saved for 2025-01-02: 5101888 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/02
-2025-06-18 12:27:28,835 - IncrementalFeeder - INFO - Building bronze for day 3: 2025-01-03
-2025-06-18 12:27:28,835 - IncrementalFeeder - INFO - Reading previous day data from hdfs://localhost:9000/user/saad/bronze/2025/01/02
-2025-06-18 12:27:29,079 - IncrementalFeeder - INFO - Day 3: Combined previous + current part
-2025-06-18 12:30:13,929 - IncrementalFeeder - INFO - Bronze saved for 2025-01-03: 7728394 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/03
-2025-06-18 12:30:13,945 - IncrementalFeeder - INFO - Cleaning up temporary data
-2025-06-18 12:30:19,055 - IncrementalFeeder - INFO - Temporary data cleaned
-2025-06-18 12:30:19,055 - IncrementalFeeder - INFO - Incremental feeder pipeline completed successfully
-2025-06-18 12:30:20,408 - IncrementalFeeder - INFO - IncrementalFeeder closed
+2025-06-20 19:01:49,958 - IncrementalFeeder - INFO - IncrementalFeeder initialized
+2025-06-20 19:01:49,959 - IncrementalFeeder - INFO - Starting incremental feeder pipeline
+2025-06-20 19:01:49,959 - IncrementalFeeder - INFO - Reading source data from file:///Users/saad/Documents/M1 EFREI/efrei/project-accident/data/US_Accidents_March23.csv
+2025-06-20 19:03:55,600 - IncrementalFeeder - INFO - Source data loaded: 7728394 rows
+2025-06-20 19:03:55,603 - IncrementalFeeder - INFO - Splitting data into 3 equal parts
+2025-06-20 19:07:29,791 - IncrementalFeeder - INFO - Data split completed: Part1=2552639, Part2=2549249, Part3=2626506
+2025-06-20 19:07:29,799 - IncrementalFeeder - INFO - Saving individual parts with situation_date
+2025-06-20 19:07:29,800 - IncrementalFeeder - INFO - Saving part 1 for date 2025-01-01
+2025-06-20 19:07:29,801 - IncrementalFeeder - INFO - Adding situation_date 2025-01-01 to data part
+2025-06-20 19:09:39,128 - IncrementalFeeder - INFO - Part 1 saved: 2552639 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_01
+2025-06-20 19:09:39,135 - IncrementalFeeder - INFO - Saving part 2 for date 2025-01-02
+2025-06-20 19:09:39,135 - IncrementalFeeder - INFO - Adding situation_date 2025-01-02 to data part
+2025-06-20 19:11:44,781 - IncrementalFeeder - INFO - Part 2 saved: 2549249 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_02
+2025-06-20 19:11:44,783 - IncrementalFeeder - INFO - Saving part 3 for date 2025-01-03
+2025-06-20 19:11:44,783 - IncrementalFeeder - INFO - Adding situation_date 2025-01-03 to data part
+2025-06-20 19:13:51,126 - IncrementalFeeder - INFO - Part 3 saved: 2626506 rows to hdfs://localhost:9000/user/saad/bronze/temp/2025_01_03
+2025-06-20 19:13:51,128 - IncrementalFeeder - INFO - Building incremental bronze data
+2025-06-20 19:13:51,128 - IncrementalFeeder - INFO - Building bronze for day 1: 2025-01-01
+2025-06-20 19:13:51,129 - IncrementalFeeder - INFO - Day 1: Using only part for 2025-01-01
+2025-06-20 19:14:49,015 - IncrementalFeeder - INFO - Bronze saved for 2025-01-01: 2552639 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/01
+2025-06-20 19:14:49,063 - IncrementalFeeder - INFO - Building bronze for day 2: 2025-01-02
+2025-06-20 19:14:49,063 - IncrementalFeeder - INFO - Reading previous day data from hdfs://localhost:9000/user/saad/bronze/2025/01/01
+2025-06-20 19:14:49,823 - IncrementalFeeder - INFO - Day 2: Combined previous + current part
+2025-06-20 19:16:57,997 - IncrementalFeeder - INFO - Bronze saved for 2025-01-02: 5101888 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/02
+2025-06-20 19:16:58,016 - IncrementalFeeder - INFO - Building bronze for day 3: 2025-01-03
+2025-06-20 19:16:58,016 - IncrementalFeeder - INFO - Reading previous day data from hdfs://localhost:9000/user/saad/bronze/2025/01/02
+2025-06-20 19:16:58,381 - IncrementalFeeder - INFO - Day 3: Combined previous + current part
+2025-06-20 19:19:39,214 - IncrementalFeeder - INFO - Bronze saved for 2025-01-03: 7728394 rows to hdfs://localhost:9000/user/saad/bronze/2025/01/03
+2025-06-20 19:19:39,281 - IncrementalFeeder - INFO - Cleaning up temporary data
+2025-06-20 19:19:45,219 - IncrementalFeeder - INFO - Temporary data cleaned
+2025-06-20 19:19:45,220 - IncrementalFeeder - INFO - Incremental feeder pipeline completed successfully
+2025-06-20 19:19:46,741 - IncrementalFeeder - INFO - IncrementalFeeder closed

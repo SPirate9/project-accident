@@ -1,60 +1,27 @@
-2025-06-19 12:29:47,314 - DataPreprocessor - INFO - DataPreprocessor SIMPLE initialized
-2025-06-19 12:29:56,932 - DataPreprocessor - INFO - Starting SIMPLE pipeline
-2025-06-19 12:29:56,933 - DataPreprocessor - INFO - Reading Bronze: hdfs://localhost:9000/user/saad/bronze/2025/01/03
-2025-06-19 12:30:14,181 - DataPreprocessor - INFO - Bronze loaded: 7728394 rows
-2025-06-19 12:30:14,181 - DataPreprocessor - INFO - Basic cleaning
-2025-06-19 12:30:17,864 - DataPreprocessor - INFO - After cleaning: 7728394 rows
-2025-06-19 12:30:17,864 - DataPreprocessor - INFO - Saving to Hive: accidents_silver
-2025-06-19 12:31:35,554 - DataPreprocessor - INFO - Cleaning column name: ID
-2025-06-19 12:31:35,559 - DataPreprocessor - INFO - Cleaning column name: Source
-2025-06-19 12:31:35,559 - DataPreprocessor - INFO - Cleaning column name: Severity
-2025-06-19 12:31:35,560 - DataPreprocessor - INFO - Cleaning column name: Start_Time
-2025-06-19 12:31:35,560 - DataPreprocessor - INFO - Cleaning column name: End_Time
-2025-06-19 12:31:35,560 - DataPreprocessor - INFO - Cleaning column name: Start_Lat
-2025-06-19 12:31:35,560 - DataPreprocessor - INFO - Cleaning column name: Start_Lng
-2025-06-19 12:31:35,561 - DataPreprocessor - INFO - Cleaning column name: End_Lat
-2025-06-19 12:31:35,561 - DataPreprocessor - INFO - Cleaning column name: End_Lng
-2025-06-19 12:31:35,562 - DataPreprocessor - INFO - Cleaning column name: Distance(mi)
-2025-06-19 12:31:35,562 - DataPreprocessor - INFO - Cleaning column name: Description
-2025-06-19 12:31:35,562 - DataPreprocessor - INFO - Cleaning column name: Street
-2025-06-19 12:31:35,562 - DataPreprocessor - INFO - Cleaning column name: City
-2025-06-19 12:31:35,563 - DataPreprocessor - INFO - Cleaning column name: County
-2025-06-19 12:31:35,563 - DataPreprocessor - INFO - Cleaning column name: State
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Zipcode
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Country
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Timezone
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Airport_Code
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Weather_Timestamp
-2025-06-19 12:31:35,564 - DataPreprocessor - INFO - Cleaning column name: Temperature(F)
-2025-06-19 12:31:35,565 - DataPreprocessor - INFO - Cleaning column name: Wind_Chill(F)
-2025-06-19 12:31:35,565 - DataPreprocessor - INFO - Cleaning column name: Humidity(%)
-2025-06-19 12:31:35,565 - DataPreprocessor - INFO - Cleaning column name: Pressure(in)
-2025-06-19 12:31:35,565 - DataPreprocessor - INFO - Cleaning column name: Visibility(mi)
-2025-06-19 12:31:35,565 - DataPreprocessor - INFO - Cleaning column name: Wind_Direction
-2025-06-19 12:31:35,567 - DataPreprocessor - INFO - Cleaning column name: Wind_Speed(mph)
-2025-06-19 12:31:35,568 - DataPreprocessor - INFO - Cleaning column name: Precipitation(in)
-2025-06-19 12:31:35,568 - DataPreprocessor - INFO - Cleaning column name: Weather_Condition
-2025-06-19 12:31:35,568 - DataPreprocessor - INFO - Cleaning column name: Amenity
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: Bump
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: Crossing
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: Give_Way
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: Junction
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: No_Exit
-2025-06-19 12:31:35,569 - DataPreprocessor - INFO - Cleaning column name: Railway
-2025-06-19 12:31:35,570 - DataPreprocessor - INFO - Cleaning column name: Roundabout
-2025-06-19 12:31:35,570 - DataPreprocessor - INFO - Cleaning column name: Station
-2025-06-19 12:31:35,570 - DataPreprocessor - INFO - Cleaning column name: Stop
-2025-06-19 12:31:35,571 - DataPreprocessor - INFO - Cleaning column name: Traffic_Calming
-2025-06-19 12:31:35,571 - DataPreprocessor - INFO - Cleaning column name: Traffic_Signal
-2025-06-19 12:31:35,572 - DataPreprocessor - INFO - Cleaning column name: Turning_Loop
-2025-06-19 12:31:35,576 - DataPreprocessor - INFO - Cleaning column name: Sunrise_Sunset
-2025-06-19 12:31:35,577 - DataPreprocessor - INFO - Cleaning column name: Civil_Twilight
-2025-06-19 12:31:35,581 - DataPreprocessor - INFO - Cleaning column name: Nautical_Twilight
-2025-06-19 12:31:35,581 - DataPreprocessor - INFO - Cleaning column name: Astronomical_Twilight
-2025-06-19 12:31:35,581 - DataPreprocessor - INFO - Cleaning column name: situation_date
-2025-06-19 12:31:55,470 - DataPreprocessor - INFO - Hive table accidents_silver created successfully
-2025-06-19 12:32:05,217 - DataPreprocessor - INFO - Hive tables:
+2025-06-20 19:20:18,110 - DataPreprocessor - INFO - DataPreprocessor initialized
+2025-06-20 19:20:34,245 - DataPreprocessor - INFO - Starting Silver pipeline
+2025-06-20 19:20:34,252 - DataPreprocessor - INFO - Reading Bronze: hdfs://localhost:9000/user/saad/bronze/2025/01/03
+2025-06-20 19:20:42,511 - DataPreprocessor - INFO - Bronze loaded: 7728394 rows
+2025-06-20 19:20:42,511 - DataPreprocessor - INFO - Starting cleaning
+2025-06-20 19:20:43,047 - DataPreprocessor - INFO - Filtering critical nulls
+2025-06-20 19:20:49,583 - DataPreprocessor - INFO - After filtering critical nulls: 7728394 rows (removed: 0)
+2025-06-20 19:20:49,584 - DataPreprocessor - INFO - Cleaning column names first...
+2025-06-20 19:20:50,891 - DataPreprocessor - INFO - Replacing missing values with intelligent defaults
+2025-06-20 19:20:51,056 - DataPreprocessor - INFO - Removing duplicates
+2025-06-20 19:21:11,937 - DataPreprocessor - INFO - Duplicates removed: 0
+2025-06-20 19:21:11,938 - DataPreprocessor - INFO - Normalizing text data
+2025-06-20 19:21:12,504 - DataPreprocessor - INFO - Validating Severity values
+2025-06-20 19:21:12,681 - DataPreprocessor - INFO - Validating geographic coordinates
+2025-06-20 19:21:27,076 - DataPreprocessor - INFO - Cleaning completed:
+2025-06-20 19:21:27,076 - DataPreprocessor - INFO -   - Initial: 7,728,394 rows
+2025-06-20 19:21:27,076 - DataPreprocessor - INFO -   - Final: 7,728,394 rows
+2025-06-20 19:21:27,076 - DataPreprocessor - INFO -   - Removed: 0 rows (0.00%)
+2025-06-20 19:21:27,077 - DataPreprocessor - INFO - Saving to Hive: accidents_silver
+2025-06-20 19:21:27,077 - DataPreprocessor - INFO - Casting data types for optimization
+2025-06-20 19:21:28,592 - DataPreprocessor - INFO - Data types casting completed
+2025-06-20 19:26:33,736 - DataPreprocessor - INFO - Hive table accidents_silver created successfully with 7,728,394 rows
+2025-06-20 19:26:47,113 - DataPreprocessor - INFO - Hive tables:
 accidents_silver
 
-2025-06-19 12:32:05,219 - DataPreprocessor - INFO - SIMPLE pipeline completed: None rows
-2025-06-19 12:32:05,747 - DataPreprocessor - INFO - Closed
+2025-06-20 19:26:47,113 - DataPreprocessor - INFO - Silver pipeline completed: 7,728,394 rows
+2025-06-20 19:26:47,890 - DataPreprocessor - INFO - Closed

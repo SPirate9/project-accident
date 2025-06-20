@@ -1,0 +1,73 @@
+2025-06-20 19:27:19,629 - MLModels - INFO - MLModels initialized with existing architecture
+2025-06-20 19:27:19,629 - MLModels - INFO - Starting ML Training Pipeline
+2025-06-20 19:27:19,630 - MLModels - INFO - ==================================================
+2025-06-20 19:27:19,630 - MLModels - INFO - ML Training timer started
+2025-06-20 19:27:19,630 - MLModels - INFO - Loading Silver data from Hive (limit: 150,000)
+2025-06-20 19:27:19,630 - MLModels - INFO - Checking Hive table schema...
+2025-06-20 19:27:21,906 - MLModels - INFO - Hive table schema:
+2025-06-20 19:27:22,347 - MLModels - INFO - Sample data from Hive:
+2025-06-20 19:27:34,373 - MLModels - INFO - Data loaded from Hive: 150,000 rows
+2025-06-20 19:27:34,379 - MLModels - INFO - Columns: 28
+2025-06-20 19:27:34,379 - MLModels - INFO - Sample data:
+2025-06-20 19:27:35,159 - MLModels - INFO - Preparing ML data...
+2025-06-20 19:27:35,160 - MLModels - INFO - Available columns: ['severity', 'start_lat', 'start_lng', 'end_lat', 'end_lng', 'distance_mi', 'temperature_f', 'humidity', 'pressure_in', 'visibility_mi', 'wind_speed_mph', 'weather_condition', 'wind_direction', 'amenity', 'bump', 'crossing', 'give_way', 'junction', 'no_exit', 'railway', 'roundabout', 'station', 'stop', 'traffic_calming', 'traffic_signal', 'turning_loop', 'sunrise_sunset', 'start_time']
+2025-06-20 19:27:35,161 - MLModels - INFO - Filling nulls for 22 columns: ['distance_mi', 'temperature_f', 'humidity', 'pressure_in', 'visibility_mi', 'wind_speed_mph', 'weather_condition', 'wind_direction', 'sunrise_sunset', 'amenity', 'bump', 'crossing', 'give_way', 'junction', 'no_exit', 'railway', 'roundabout', 'station', 'stop', 'traffic_calming', 'traffic_signal', 'turning_loop']
+2025-06-20 19:27:37,043 - MLModels - INFO - ML data prepared: 150,000 rows
+2025-06-20 19:27:37,043 - MLModels - INFO - 
+ DATASET OVERVIEW
+2025-06-20 19:27:37,044 - MLModels - INFO - ==============================
+2025-06-20 19:27:38,291 - MLModels - INFO - Total samples: 150,000
+2025-06-20 19:27:38,292 - MLModels - INFO - 
+ Severity Distribution:
+2025-06-20 19:27:40,178 - MLModels - INFO - 
+ SEVERITY PREDICTION MODEL
+2025-06-20 19:27:40,178 - MLModels - INFO - ==================================================
+2025-06-20 19:27:40,180 - MLModels - INFO - Using 17 features: ['start_lat', 'start_lng', 'distance_mi', 'temperature_f', 'humidity', 'pressure_in', 'visibility_mi', 'wind_speed_mph', 'amenity', 'bump', 'crossing', 'give_way', 'junction', 'traffic_signal', 'turning_loop', 'hour', 'day_of_week']
+2025-06-20 19:27:50,513 - MLModels - INFO - Training: 119,862 samples
+2025-06-20 19:27:50,513 - MLModels - INFO - Testing: 30,138 samples
+2025-06-20 19:27:50,514 - MLModels - INFO - Training Random Forest...
+2025-06-20 19:28:42,865 - MLModels - INFO - Accuracy: 0.809
+2025-06-20 19:28:42,969 - MLModels - INFO - 
+ Top 5 Feature Importance:
+2025-06-20 19:28:42,970 - MLModels - INFO -   1. distance_mi: 0.5663
+2025-06-20 19:28:42,970 - MLModels - INFO -   2. traffic_signal: 0.1219
+2025-06-20 19:28:42,970 - MLModels - INFO -   3. crossing: 0.0672
+2025-06-20 19:28:42,971 - MLModels - INFO -   4. pressure_in: 0.0449
+2025-06-20 19:28:42,971 - MLModels - INFO -   5. start_lat: 0.0419
+2025-06-20 19:28:42,971 - MLModels - INFO - 
+Sample Predictions:
+2025-06-20 19:28:47,152 - MLModels - INFO - 
+Confusion Matrix:
+2025-06-20 19:28:52,136 - MLModels - INFO - Saving severity_predictions to Gold: hdfs://localhost:9000/user/saad/gold/ml_severity_predictions
+2025-06-20 19:29:01,965 - MLModels - INFO - severity_predictions: 30,138 rows saved to Gold
+2025-06-20 19:29:01,966 - MLModels - INFO - 
+ RISK ZONE CLUSTERING
+2025-06-20 19:29:01,967 - MLModels - INFO - ========================================
+2025-06-20 19:29:01,967 - MLModels - INFO - Clustering with features: ['start_lat', 'start_lng', 'hour', 'day_of_week', 'junction', 'traffic_signal']
+2025-06-20 19:29:02,002 - MLModels - INFO - Training KMeans clustering...
+2025-06-20 19:29:17,210 - MLModels - INFO - Risk Zone Analysis:
+2025-06-20 19:29:19,090 - MLModels - INFO - Saving risk_zones to Gold: hdfs://localhost:9000/user/saad/gold/ml_risk_zones
+2025-06-20 19:29:23,270 - MLModels - INFO - risk_zones: 5 rows saved to Gold
+2025-06-20 19:29:25,057 - MLModels - INFO - 
+ GEOGRAPHICAL HOTSPOTS
+2025-06-20 19:29:25,058 - MLModels - INFO - ===================================
+2025-06-20 19:29:26,762 - MLModels - INFO - Created 50 hotspots
+2025-06-20 19:29:27,966 - MLModels - INFO - Saving hotspots to Gold: hdfs://localhost:9000/user/saad/gold/ml_hotspots
+2025-06-20 19:29:31,263 - MLModels - INFO - hotspots: 50 rows saved to Gold
+2025-06-20 19:29:34,761 - MLModels - INFO - ML Training completed in 135.13 seconds
+2025-06-20 19:29:34,761 - MLModels - INFO - 
+ ML TRAINING COMPLETED!
+2025-06-20 19:29:34,762 - MLModels - INFO - ========================================
+2025-06-20 19:29:34,762 - MLModels - INFO - Dataset: 150,000 samples processed
+2025-06-20 19:29:34,762 - MLModels - INFO - Severity Prediction Accuracy: 0.809
+2025-06-20 19:29:34,762 - MLModels - INFO - Risk Zones: 5 zones created
+2025-06-20 19:29:34,762 - MLModels - INFO - Hotspots: 50 hotspots identified
+2025-06-20 19:29:34,762 - MLModels - INFO - Total Training Time: 135.13 seconds
+2025-06-20 19:29:34,762 - MLModels - INFO - Results saved in Gold layer
+2025-06-20 19:29:34,763 - MLModels - INFO - Ready for DataMart export to PostgreSQL
+2025-06-20 19:29:34,763 - MLModels - INFO - 
+ Gold Layer ML Results:
+2025-06-20 19:29:34,763 - MLModels - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_severity_predictions
+2025-06-20 19:29:34,763 - MLModels - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_risk_zones
+2025-06-20 19:29:34,764 - MLModels - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_hotspots
+2025-06-20 19:29:35,587 - MLModels - INFO - Spark session closed

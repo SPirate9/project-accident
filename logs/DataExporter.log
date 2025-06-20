@@ -1,0 +1,71 @@
+2025-06-20 19:30:06,054 - DataExporter - INFO - DataExporter initialized - HIVE → PARQUET → POSTGRES
+2025-06-20 19:30:06,056 - DataExporter - INFO - Using GOLD path: hdfs://localhost:9000/user/saad/gold
+2025-06-20 19:30:06,056 - DataExporter - INFO - Starting 2-STEP export pipeline
+2025-06-20 19:30:06,057 - DataExporter - INFO - HIVE SILVER → PARQUET HDFS → POSTGRESQL
+2025-06-20 19:30:06,057 - DataExporter - INFO - === ÉTAPE 1: AGRÉGATIONS HIVE → PARQUET ===
+2025-06-20 19:30:06,057 - DataExporter - INFO - Reading Silver data from Hive
+2025-06-20 19:30:15,149 - DataExporter - INFO - Silver loaded: 7,728,394 rows
+2025-06-20 19:30:15,150 - DataExporter - INFO - Creating datamarts...
+2025-06-20 19:30:15,150 - DataExporter - INFO - Creating state stats
+2025-06-20 19:30:15,223 - DataExporter - INFO - Creating time stats
+2025-06-20 19:30:15,302 - DataExporter - INFO - Creating weather stats
+2025-06-20 19:30:15,372 - DataExporter - INFO - Creating city hotspots
+2025-06-20 19:30:15,454 - DataExporter - INFO - Saving to GOLD layer...
+2025-06-20 19:30:15,455 - DataExporter - INFO - Saving state_stats to GOLD Parquet: hdfs://localhost:9000/user/saad/gold/state_stats
+2025-06-20 19:30:26,205 - DataExporter - INFO - state_stats: 49 rows saved to GOLD
+2025-06-20 19:30:26,206 - DataExporter - INFO - Saving time_patterns to GOLD Parquet: hdfs://localhost:9000/user/saad/gold/time_patterns
+2025-06-20 19:30:35,550 - DataExporter - INFO - time_patterns: 168 rows saved to GOLD
+2025-06-20 19:30:35,551 - DataExporter - INFO - Saving weather_analysis to GOLD Parquet: hdfs://localhost:9000/user/saad/gold/weather_analysis
+2025-06-20 19:30:41,401 - DataExporter - INFO - weather_analysis: 144 rows saved to GOLD
+2025-06-20 19:30:41,403 - DataExporter - INFO - Saving city_hotspots to GOLD Parquet: hdfs://localhost:9000/user/saad/gold/city_hotspots
+2025-06-20 19:30:51,288 - DataExporter - INFO - city_hotspots: 200 rows saved to GOLD
+2025-06-20 19:30:51,289 - DataExporter - INFO - Agrégations completed - Datamarts saved to GOLD layer
+2025-06-20 19:30:51,289 - DataExporter - INFO - === ÉTAPE 2: GOLD PARQUET → POSTGRESQL ===
+2025-06-20 19:30:51,289 - DataExporter - INFO - Reading state_stats from GOLD: hdfs://localhost:9000/user/saad/gold/state_stats
+2025-06-20 19:30:51,853 - DataExporter - INFO - state_stats: 49 rows loaded from GOLD
+2025-06-20 19:30:51,854 - DataExporter - INFO - Exporting state_stats to PostgreSQL
+2025-06-20 19:30:55,899 - DataExporter - INFO - state_stats: 49 rows exported to PostgreSQL
+2025-06-20 19:30:55,899 - DataExporter - INFO - Reading time_patterns from GOLD: hdfs://localhost:9000/user/saad/gold/time_patterns
+2025-06-20 19:30:56,269 - DataExporter - INFO - time_patterns: 168 rows loaded from GOLD
+2025-06-20 19:30:56,270 - DataExporter - INFO - Exporting time_patterns to PostgreSQL
+2025-06-20 19:30:56,831 - DataExporter - INFO - time_patterns: 168 rows exported to PostgreSQL
+2025-06-20 19:30:56,831 - DataExporter - INFO - Reading weather_analysis from GOLD: hdfs://localhost:9000/user/saad/gold/weather_analysis
+2025-06-20 19:30:57,237 - DataExporter - INFO - weather_analysis: 144 rows loaded from GOLD
+2025-06-20 19:30:57,238 - DataExporter - INFO - Exporting weather_analysis to PostgreSQL
+2025-06-20 19:30:57,770 - DataExporter - INFO - weather_analysis: 144 rows exported to PostgreSQL
+2025-06-20 19:30:57,770 - DataExporter - INFO - Reading city_hotspots from GOLD: hdfs://localhost:9000/user/saad/gold/city_hotspots
+2025-06-20 19:30:58,117 - DataExporter - INFO - city_hotspots: 200 rows loaded from GOLD
+2025-06-20 19:30:58,117 - DataExporter - INFO - Exporting city_hotspots to PostgreSQL
+2025-06-20 19:30:58,583 - DataExporter - INFO - city_hotspots: 200 rows exported to PostgreSQL
+2025-06-20 19:30:58,584 - DataExporter - INFO - Reading ml_severity_predictions from GOLD: hdfs://localhost:9000/user/saad/gold/ml_severity_predictions
+2025-06-20 19:30:58,990 - DataExporter - INFO - ml_severity_predictions: 30,138 rows loaded from GOLD
+2025-06-20 19:30:59,000 - DataExporter - INFO - Exporting ml_severity_predictions to PostgreSQL
+2025-06-20 19:31:01,089 - DataExporter - INFO - ml_severity_predictions: 30,138 rows exported to PostgreSQL
+2025-06-20 19:31:01,089 - DataExporter - INFO - Reading ml_risk_zones from GOLD: hdfs://localhost:9000/user/saad/gold/ml_risk_zones
+2025-06-20 19:31:01,716 - DataExporter - INFO - ml_risk_zones: 5 rows loaded from GOLD
+2025-06-20 19:31:01,716 - DataExporter - INFO - Exporting ml_risk_zones to PostgreSQL
+2025-06-20 19:31:02,290 - DataExporter - INFO - ml_risk_zones: 5 rows exported to PostgreSQL
+2025-06-20 19:31:02,290 - DataExporter - INFO - Reading ml_hotspots from GOLD: hdfs://localhost:9000/user/saad/gold/ml_hotspots
+2025-06-20 19:31:02,619 - DataExporter - INFO - ml_hotspots: 50 rows loaded from GOLD
+2025-06-20 19:31:02,619 - DataExporter - INFO - Exporting ml_hotspots to PostgreSQL
+2025-06-20 19:31:03,131 - DataExporter - INFO - ml_hotspots: 50 rows exported to PostgreSQL
+2025-06-20 19:31:03,131 - DataExporter - INFO - PostgreSQL export completed!
+2025-06-20 19:31:03,133 - DataExporter - INFO - Complete pipeline SUCCESS!
+2025-06-20 19:31:03,133 - DataExporter - INFO - Tables ready for API/viz:
+2025-06-20 19:31:03,133 - DataExporter - INFO -   - state_stats: Cartes par état
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - time_patterns: Heatmaps temporelles
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - weather_analysis: Charts météo
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - city_hotspots: Maps géo avec points
+2025-06-20 19:31:03,134 - DataExporter - INFO -   === ML TABLES ===
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - ml_severity_predictions: Prédictions de sévérité
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - ml_risk_zones: Zones à risque clustering
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - ml_hotspots: Hotspots géographiques ML
+2025-06-20 19:31:03,134 - DataExporter - INFO - GOLD Parquet datamarts:
+2025-06-20 19:31:03,134 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/state_stats
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/time_patterns
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/weather_analysis
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/city_hotspots
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_severity_predictions
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_risk_zones
+2025-06-20 19:31:03,135 - DataExporter - INFO -   - hdfs://localhost:9000/user/saad/gold/ml_hotspots
+2025-06-20 19:31:03,604 - DataExporter - INFO - DataExporter closed

@@ -1,38 +1,28 @@
-2025-06-18 12:14:28,455 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 12:14:28,455 - MainPipeline - INFO - === STEP 1: INCREMENTAL FEEDER ===
-2025-06-18 12:30:19,056 - MainPipeline - INFO - Feeder completed successfully
-2025-06-18 12:30:20,408 - MainPipeline - INFO - Pipeline completed
-2025-06-18 15:58:26,373 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 15:58:31,272 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-18 15:58:31,272 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-18 16:21:22,282 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 16:21:24,573 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder2025-06-18 16:41:09,712 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 16:41:11,941 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-18 16:41:11,941 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-18 16:48:11,356 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 16:48:13,810 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-18 16:48:13,810 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-18 16:51:36,053 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 16:51:38,532 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-18 16:51:38,533 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-18 17:07:46,989 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-18 17:07:49,280 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-19 09:38:03,256 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-19 09:38:05,336 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-19 09:38:05,337 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-19 09:40:15,516 - MainPipeline - INFO - Preprocessing completed successfully
-2025-06-19 09:40:15,727 - MainPipeline - INFO - Pipeline completed successfully
-2025-06-19 09:53:55,660 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-19 09:53:57,761 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-19 09:53:57,761 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-19 09:55:42,944 - MainPipeline - ERROR - Error in preprocessing: create_table_from_parquet() got an unexpected keyword argument 'parquet_path'
-2025-06-19 10:00:15,565 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-19 10:00:17,688 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-19 10:00:17,689 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-19 10:02:26,204 - MainPipeline - INFO - Preprocessing completed successfully
-2025-06-19 10:02:26,392 - MainPipeline - INFO - Pipeline completed successfully
-2025-06-19 12:29:39,716 - MainPipeline - INFO - Starting accident analysis pipeline
-2025-06-19 12:29:42,233 - MainPipeline - INFO - Bronze data already exists at hdfs://localhost:9000/user/saad/bronze/2025/01/03, skipping feeder
-2025-06-19 12:29:42,233 - MainPipeline - INFO - === STEP 2: DATA PREPROCESSING ===
-2025-06-19 12:32:05,219 - MainPipeline - INFO - Preprocessing completed successfully
-2025-06-19 12:32:05,748 - MainPipeline - INFO - Pipeline completed successfully
+2025-06-20 19:01:11,561 - MainPipeline - INFO - Starting complete accident analysis pipeline with 4 applications
+2025-06-20 19:01:11,561 - MainPipeline - INFO - ======================================================================
+2025-06-20 19:01:11,562 - MainPipeline - INFO - === APPLICATION 1: DATA FEEDING (BRONZE) ===
+2025-06-20 19:19:46,743 - MainPipeline - INFO - APPLICATION 1 COMPLETED: Feeder
+2025-06-20 19:19:46,746 - MainPipeline - INFO - === APPLICATION 2: DATA PREPROCESSING (SILVER) ===
+2025-06-20 19:26:47,891 - MainPipeline - INFO - APPLICATION 2 COMPLETED: Preprocessor
+2025-06-20 19:26:47,891 - MainPipeline - INFO - === APPLICATION 3: MACHINE LEARNING TRAINING ===
+2025-06-20 19:29:35,588 - MainPipeline - INFO - APPLICATION 3 COMPLETED: ML Training
+2025-06-20 19:29:35,589 - MainPipeline - INFO - === APPLICATION 4: DATAMART & POSTGRESQL EXPORT ===
+2025-06-20 19:31:03,604 - MainPipeline - INFO - APPLICATION 4 COMPLETED: Datamart
+2025-06-20 19:31:03,604 - MainPipeline - INFO - ======================================================================
+2025-06-20 19:31:03,605 - MainPipeline - INFO - COMPLETE PIPELINE EXECUTED SUCCESSFULLY
+2025-06-20 19:31:03,605 - MainPipeline - INFO - ======================================================================
+2025-06-20 19:31:03,605 - MainPipeline - INFO - ARCHITECTURE SUMMARY:
+2025-06-20 19:31:03,605 - MainPipeline - INFO -   APPLICATION 1: Feeder -> Bronze Layer (HDFS)
+2025-06-20 19:31:03,605 - MainPipeline - INFO -   APPLICATION 2: Preprocessor -> Silver Layer (Hive)
+2025-06-20 19:31:03,605 - MainPipeline - INFO -   APPLICATION 3: ML Training -> Models + Gold Layer
+2025-06-20 19:31:03,606 - MainPipeline - INFO -   APPLICATION 4: Datamart -> PostgreSQL (API Ready)
+2025-06-20 19:31:03,606 - MainPipeline - INFO - 
+2025-06-20 19:31:03,606 - MainPipeline - INFO - RESULTS:
+2025-06-20 19:31:03,606 - MainPipeline - INFO -   ML Results: {'severity_accuracy': 0.8087132523724202, 'risk_zones': 5, 'hotspots': 50}
+2025-06-20 19:31:03,606 - MainPipeline - INFO -   Data ready for visualization in PostgreSQL
+2025-06-20 19:31:03,606 - MainPipeline - INFO -   ML models trained and saved in GOLD layer
+2025-06-20 19:31:03,606 - MainPipeline - INFO -   API available at: http://localhost:8000/docs
+2025-06-20 19:31:03,607 - MainPipeline - INFO - 
+2025-06-20 19:31:03,607 - MainPipeline - INFO - YARN EXECUTION:
+2025-06-20 19:31:03,607 - MainPipeline - INFO -   Check Yarn UI: http://localhost:8088
+2025-06-20 19:31:03,607 - MainPipeline - INFO -   Check Spark UI: http://localhost:4040
