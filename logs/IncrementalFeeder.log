@@ -29,4 +29,3 @@
 2025-06-20 19:19:39,281 - IncrementalFeeder - INFO - Cleaning up temporary data
 2025-06-20 19:19:45,219 - IncrementalFeeder - INFO - Temporary data cleaned
 2025-06-20 19:19:45,220 - IncrementalFeeder - INFO - Incremental feeder pipeline completed successfully
-2025-06-20 19:19:46,741 - IncrementalFeeder - INFO - IncrementalFeeder closed
